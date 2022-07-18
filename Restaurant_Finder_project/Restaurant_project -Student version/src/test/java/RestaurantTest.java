@@ -56,4 +56,12 @@ class RestaurantTest {
                 ()->restaurant.removeFromMenu("French fries"));
     }
     //<<<<<<<<<<<<<<<<<<<<<<<MENU>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+    @Test
+    public void calculate_total_ammount_of_selected_items_must_be_the_total_price_of_selected_items(){
+        assertEquals(119+269, restaurant.calculateTheCostOfSelectedItems("Sweet corn soup","Vegetable lasagne"));
+    }
+    @Test
+    public void calculate_total_ammount_if_no_item_is_selected_and_it_must_be_zero(){
+        assertEquals(119+269, restaurant.calculateTheCostOfSelectedItems("Sweet corn soup","Vegetable lasagne"));
+    }
 }
